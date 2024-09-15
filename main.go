@@ -5,18 +5,19 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tanukiops/adventofcode/aoc"
+	"github.com/tanukiops/adventofcode/aoc/trebuchet"
 )
 
 func main() {
-	printResult()
+	fmt.Println("Day 1")
+	day1()
 }
 func checkErrors(err error) {
 	if err != nil {
 		panic(err)
 	}
 }
-func printResult() {
+func day1() {
 	inputFile := "assets/day1.txt"
 	lines := []string{}
 	file, err := os.Open(inputFile)
@@ -27,6 +28,6 @@ func printResult() {
 	for scanner.Scan() {
 		lines = append(lines, scanner.Text())
 	}
-	result := aoc.TrebuchetCalibration(lines)
+	result := trebuchet.TrebuchetCalibration(lines)
 	fmt.Println(result)
 }
