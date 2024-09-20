@@ -1,7 +1,6 @@
 package cubeconundrum
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -37,7 +36,6 @@ func ParseGame(s string) (grabs []map[string]int) {
 		}
 		grabs = append(grabs, grab)
 	}
-	fmt.Println(grabs)
 	return
 }
 
